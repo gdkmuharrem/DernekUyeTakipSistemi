@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0489A96B-2C93-4FD2-A287-D198F07C5F26}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DernekUyeTakipSistemi</RootNamespace>
+    <AssemblyName>DernekUyeTakipSistemi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.7.430, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZedGraph.5.1.7\lib\net35-Client\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\MenuLayer\EmployeeEditLayer\EmployeeEditMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\MenuLayer\EmployeeEditLayer\EmployeeEditMenu.Designer.cs">
+      <DependentUpon>EmployeeEditMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MenuLayer\EmployeeEditLayer\MenuLayer\EmployeeEditEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\MenuLayer\EmployeeEditLayer\MenuLayer\EmployeeEditEkle.Designer.cs">
+      <DependentUpon>EmployeeEditEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MenuLayer\EmployeeEditLayer\MenuLayer\EmployeeEditLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\MenuLayer\EmployeeEditLayer\MenuLayer\EmployeeEditLogin.Designer.cs">
+      <DependentUpon>EmployeeEditLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MenuLayer\EmployeeEditLayer\MenuLayer\EmployeeEditSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\MenuLayer\EmployeeEditLayer\MenuLayer\EmployeeEditSearch.Designer.cs">
+      <DependentUpon>EmployeeEditSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MenuLayer\EmployeeEditLayer\MenuLayer\EmployeeEditDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\MenuLayer\EmployeeEditLayer\MenuLayer\EmployeeEditDuzenle.Designer.cs">
+      <DependentUpon>EmployeeEditDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MenuLayer\GraphLayer\GraphMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\MenuLayer\GraphLayer\GraphMenu.Designer.cs">
+      <DependentUpon>GraphMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\ListLayer\ListMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\ListLayer\ListMenu.Designer.cs">
+      <DependentUpon>ListMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\ListLayer\MailPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\ListLayer\MailPage.Designer.cs">
+      <DependentUpon>MailPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AMenu.Designer.cs">
+      <DependentUpon>AMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\MenuLayer\CustomerInfoLayer\MenuLayer\CustomerInfoLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\MenuLayer\CustomerInfoLayer\MenuLayer\CustomerInfoLogin.Designer.cs">
+      <DependentUpon>CustomerInfoLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\MenuLayer\CustomerInfoLayer\MenuLayer\CustomerInfoPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\MenuLayer\CustomerInfoLayer\MenuLayer\CustomerInfoPersonal.Designer.cs">
+      <DependentUpon>CustomerInfoPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CMenu.Designer.cs">
+      <DependentUpon>CMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\MenuLayer\DuesLayer\CustomerDues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\MenuLayer\DuesLayer\CustomerDues.Designer.cs">
+      <DependentUpon>CustomerDues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\MenuLayer\DebtLayer\CustomerDebt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\MenuLayer\DebtLayer\CustomerDebt.Designer.cs">
+      <DependentUpon>CustomerDebt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\MenuLayer\CustomerInfoLayer\CustomerInfoMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\MenuLayer\CustomerInfoLayer\CustomerInfoMenu.Designer.cs">
+      <DependentUpon>CustomerInfoMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\DuesLayer\DuesMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\DuesLayer\DuesMenu.Designer.cs">
+      <DependentUpon>DuesMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\DuesLayer\MenuLayer\SetDues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\DuesLayer\MenuLayer\SetDues.Designer.cs">
+      <DependentUpon>SetDues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\DuesLayer\MenuLayer\PaymentDues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\DuesLayer\MenuLayer\PaymentDues.Designer.cs">
+      <DependentUpon>PaymentDues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\EmployeeInfoLayer\EmployeeInfoMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\EmployeeInfoLayer\EmployeeInfoMenu.Designer.cs">
+      <DependentUpon>EmployeeInfoMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\EmployeeInfoLayer\MenuLayer\EmployeeInfoLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\EmployeeInfoLayer\MenuLayer\EmployeeInfoLogin.Designer.cs">
+      <DependentUpon>EmployeeInfoLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\EmployeeInfoLayer\MenuLayer\EmployeeInfoPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\EmployeeInfoLayer\MenuLayer\EmployeeInfoPersonal.Designer.cs">
+      <DependentUpon>EmployeeInfoPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\CustomerEditLayer\MenuLayer\CustemerEditDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\CustomerEditLayer\MenuLayer\CustemerEditDuzenle.Designer.cs">
+      <DependentUpon>CustemerEditDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\CustomerEditLayer\MenuLayer\CustomerEditEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\CustomerEditLayer\MenuLayer\CustomerEditEkle.Designer.cs">
+      <DependentUpon>CustomerEditEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\CustomerEditLayer\MenuLayer\CustomerEditLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\CustomerEditLayer\MenuLayer\CustomerEditLogin.Designer.cs">
+      <DependentUpon>CustomerEditLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\CustomerEditLayer\MenuLayer\CustomerEditSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\CustomerEditLayer\MenuLayer\CustomerEditSearch.Designer.cs">
+      <DependentUpon>CustomerEditSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\CustomerEditLayer\CustomerEditMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\MenuLayer\CustomerEditLayer\CustomerEditMenu.Designer.cs">
+      <DependentUpon>CustomerEditMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\EMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\EMenu.Designer.cs">
+      <DependentUpon>EMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin\MenuLayer\EmployeeEditLayer\EmployeeEditMenu.resx">
+      <DependentUpon>EmployeeEditMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\MenuLayer\EmployeeEditLayer\MenuLayer\EmployeeEditEkle.resx">
+      <DependentUpon>EmployeeEditEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\MenuLayer\EmployeeEditLayer\MenuLayer\EmployeeEditLogin.resx">
+      <DependentUpon>EmployeeEditLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\MenuLayer\EmployeeEditLayer\MenuLayer\EmployeeEditSearch.resx">
+      <DependentUpon>EmployeeEditSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\MenuLayer\EmployeeEditLayer\MenuLayer\EmployeeEditDuzenle.resx">
+      <DependentUpon>EmployeeEditDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\MenuLayer\GraphLayer\GraphMenu.resx">
+      <DependentUpon>GraphMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\MenuLayer\ListLayer\ListMenu.resx">
+      <DependentUpon>ListMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\MenuLayer\ListLayer\MailPage.resx">
+      <DependentUpon>MailPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AMenu.resx">
+      <DependentUpon>AMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\MenuLayer\DuesLayer\CustomerDues.resx">
+      <DependentUpon>CustomerDues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\MenuLayer\DebtLayer\CustomerDebt.resx">
+      <DependentUpon>CustomerDebt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\MenuLayer\CustomerInfoLayer\MenuLayer\CustomerInfoLogin.resx">
+      <DependentUpon>CustomerInfoLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\MenuLayer\CustomerInfoLayer\MenuLayer\CustomerInfoPersonal.resx">
+      <DependentUpon>CustomerInfoPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CMenu.resx">
+      <DependentUpon>CMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\MenuLayer\CustomerInfoLayer\CustomerInfoMenu.resx">
+      <DependentUpon>CustomerInfoMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\MenuLayer\DuesLayer\DuesMenu.resx">
+      <DependentUpon>DuesMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\MenuLayer\DuesLayer\MenuLayer\SetDues.resx">
+      <DependentUpon>SetDues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\MenuLayer\DuesLayer\MenuLayer\PaymentDues.resx">
+      <DependentUpon>PaymentDues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\MenuLayer\EmployeeInfoLayer\EmployeeInfoMenu.resx">
+      <DependentUpon>EmployeeInfoMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\MenuLayer\EmployeeInfoLayer\MenuLayer\EmployeeInfoLogin.resx">
+      <DependentUpon>EmployeeInfoLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\MenuLayer\EmployeeInfoLayer\MenuLayer\EmployeeInfoPersonal.resx">
+      <DependentUpon>EmployeeInfoPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\MenuLayer\CustomerEditLayer\MenuLayer\CustemerEditDuzenle.resx">
+      <DependentUpon>CustemerEditDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\MenuLayer\CustomerEditLayer\MenuLayer\CustomerEditEkle.resx">
+      <DependentUpon>CustomerEditEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\MenuLayer\CustomerEditLayer\MenuLayer\CustomerEditLogin.resx">
+      <DependentUpon>CustomerEditLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\MenuLayer\CustomerEditLayer\MenuLayer\CustomerEditSearch.resx">
+      <DependentUpon>CustomerEditSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\MenuLayer\CustomerEditLayer\CustomerEditMenu.resx">
+      <DependentUpon>CustomerEditMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\EMenu.resx">
+      <DependentUpon>EMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{799ca3ac-a377-41af-85e7-3f24577fd68d}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{bc65e6cf-b6d4-48ef-a86d-76cfed9f443a}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">
+      <Project>{8bc32e8c-830b-4b30-9381-cb3f86bbd2a1}</Project>
+      <Name>EntityLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="License-LGPL.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
